@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:investment/core/utils/const.dart';
+import 'package:investment/core/styles/styles.dart';
+import 'package:investment/features/register_screen/presentation/view/registration_screen.dart';
 
-class RegistrartionScreen extends StatelessWidget {
-  const RegistrartionScreen({super.key});
+class WelcomScreen extends StatelessWidget {
+  const WelcomScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,23 +20,13 @@ class RegistrartionScreen extends StatelessWidget {
             
             mainAxisAlignment: MainAxisAlignment.end,
             children:[ Text('Welcome to SEMSARI',
-              style: TextStyle(
-                fontSize: 20.sp,
-                fontFamily: fontFamily,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-              ),
+              style: Styles.santosh20W400,
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 10.h),
               child: Text('Join us now to become one of the owners at the lowest prices.',
               textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 15.sp,
-                  fontFamily: fontFamily,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.white,
-                ),
+                style: Styles.santosh15W400
               ),
             ),
             Padding(
@@ -44,21 +35,18 @@ class RegistrartionScreen extends StatelessWidget {
                 width: 1.sw,
                 child: ElevatedButton(
                   onPressed: () {
-                  
-                }, child: Text('Create an account',
-                  style: TextStyle(
-                    fontSize: 15.sp,
-                    fontFamily: fontFamily,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black,
-                  ),
-                ),
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => RegistrationScreen()));
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r),
                   ),
                   padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
+                ), child: Text('Create an account',
+                  style: Styles.santosh15W700.copyWith(
+                    color: Color.fromARGB(255, 79, 43, 141),
+                  ),
                 ),
                 ),
               ),
@@ -69,21 +57,11 @@ class RegistrartionScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Already have an account?',
-                    style: TextStyle(
-                      fontSize: 15.sp,
-                      fontFamily: fontFamily,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.white,
-                    ),
+                    style: Styles.santosh15W400,
                   ),
                   SizedBox(width: 3.w,),
                  Text('Login',
-                    style: TextStyle(
-                      fontSize: 15.sp,
-                      fontFamily: fontFamily,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                    ),
+                    style: Styles.santosh15W700
                   ),
                 ],
               ),
