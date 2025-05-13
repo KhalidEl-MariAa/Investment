@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:investment/core/styles/styles.dart';
+import 'package:investment/core/utils/colors.dart';
 import 'package:investment/features/register_screen/presentation/view/widgets/custom_elevatedbutton.dart';
 
 class RegistrationScreen extends StatelessWidget {
@@ -10,13 +11,13 @@ class RegistrationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.whiteColor,
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: AppColors.whiteColor,
           title: Text(
             'Create an account',
             style: Styles.santosh15W700.copyWith(
-              color: Color.fromARGB(255, 79, 43, 141),
+              color: AppColors.primaryColor,
             ),
           ),
           centerTitle: true,
@@ -39,7 +40,7 @@ class RegistrationScreen extends StatelessWidget {
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(vertical: 20.h),
-                    backgroundColor: const Color.fromARGB(255, 79, 43, 141),
+                    backgroundColor: AppColors.primaryColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.r),
                     ),

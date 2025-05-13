@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:investment/core/styles/styles.dart';
+import 'package:investment/core/utils/colors.dart';
 import 'package:investment/features/register_screen/presentation/view/registration_screen.dart';
 
 class WelcomScreen extends StatelessWidget {
@@ -38,7 +39,7 @@ class WelcomScreen extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => RegistrationScreen()));
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
+                  backgroundColor: AppColors.whiteColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.r),
                   ),
