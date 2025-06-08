@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:investment/core/utils/screen_names.dart';
+import 'package:investment/features/login_screen/presentation/view/login_screen.dart';
 import 'package:investment/features/otp_screen/presentation/view/otp_screen.dart';
 import 'package:investment/features/register_screen/presentation/view/registration_screen.dart';
 import 'package:investment/features/welcome_screen/presentation/view/welcome_screen.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
           ScreenNames.welcome: (context) => const WelcomScreen(),
           ScreenNames.register: (context) => const RegistrationScreen(),
           ScreenNames.otp: (context) => const OtpScreen(),
+          ScreenNames.login: (context) => const LoginScreen(),
           // Add other routes here
         },
         initialRoute: ScreenNames.welcome,

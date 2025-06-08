@@ -9,8 +9,8 @@ import 'package:investment/features/register_screen/presentation/view/widgets/cu
 import 'package:investment/features/register_screen/presentation/view/widgets/custom_textfield.dart';
 import 'package:investment/features/register_screen/presentation/view/widgets/password_textfield.dart';
 
-class RegistrationScreen extends StatelessWidget {
-  const RegistrationScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class RegistrationScreen extends StatelessWidget {
           shadowColor: AppColors.whiteColor,
           backgroundColor: AppColors.whiteColor,
           title: Text(
-            'Create an account',
+            'Login to your account',
             style: Styles.santosh15W700.copyWith(color: AppColors.primaryColor),
           ),
           centerTitle: true,
@@ -35,17 +35,14 @@ class RegistrationScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.h),
                   child: Text(
-                    'Begin with creating new free account. This helps you keep your investing way easier.',
+                    'Welcome back! Please login to your account.',
                     textAlign: TextAlign.center,
                     style: Styles.santosh15W400.copyWith(
                       color: AppColors.black,
                     ),
                   ),
                 ),
-                CustomTextfield(hintText: 'Full Name', icon: Icons.person),
-                SizedBox(height: 10.h),
-                CustomTextfield(hintText: 'Email', icon: Icons.email),
-                SizedBox(height: 10.h),
+                
                 CustomTextfield(hintText: 'Phone', icon: Icons.phone),
                 SizedBox(height: 10.h),
                 PasswordTextfield(
@@ -53,13 +50,17 @@ class RegistrationScreen extends StatelessWidget {
                   icon: Icons.lock,
                   seePassAdvices: true,
                 ),
-                SizedBox(height: 10.h),
-                PasswordTextfield(
-                  hintText: 'Confirm Password',
-                  icon: Icons.lock,
-                  seePassAdvices: false,
+                SizedBox(height: 5.h),
+                Align(
+                  alignment: AlignmentDirectional.centerEnd,
+                  child: Text( 'Forgot Password?',
+                      style: Styles.santosh15W400.copyWith(
+                        color: AppColors.black,
+                        fontSize: 10.sp,
+                      )),
                 ),
                 SizedBox(height: 20.h),
+              
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
                   child: SizedBox(
@@ -72,7 +73,7 @@ class RegistrationScreen extends StatelessWidget {
                       backgroundColor: AppColors.primaryColor,
                       borderColor: AppColors.black,
                       child: Text(
-                        'Create an account',
+                        'Login',
                         style: Styles.santosh15W700,
                       ),
                     ),
@@ -94,22 +95,16 @@ class RegistrationScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Already have an account?',
+                        'Don\'t have an account?',
                         style: Styles.santosh15W400.copyWith(
                           color: AppColors.black,
                         ),
                       ),
                       SizedBox(width: 1.w),
-                      GestureDetector(
-                        onTap: () {
-                          
-                          Navigator.pushNamed(context, ScreenNames.login);
-                        },
-                        child: Text(
-                          'Login',
-                          style: Styles.santosh15W700.copyWith(
-                            color: AppColors.primaryColor,
-                          ),
+                      Text(
+                        'Register',
+                        style: Styles.santosh15W700.copyWith(
+                          color: AppColors.primaryColor,
                         ),
                       ),
                     ],
