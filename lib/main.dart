@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:investment/core/utils/screen_names.dart';
+import 'package:investment/features/otp_screen/presentation/view/otp_screen.dart';
+import 'package:investment/features/register_screen/presentation/view/registration_screen.dart';
 import 'package:investment/features/welcome_screen/presentation/view/welcome_screen.dart';
 
 void main() {
@@ -17,12 +20,21 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-      
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.white,
+            elevation: 0,
+            shadowColor: Colors.transparent,
+          ),
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: WelcomScreen(),
+        routes: {
+          ScreenNames.welcome: (context) => const WelcomScreen(),
+          ScreenNames.register: (context) => const RegistrationScreen(),
+          ScreenNames.otp: (context) => const OtpScreen(),
+          // Add other routes here
+        },
+        initialRoute: ScreenNames.welcome,
       ),
     );
   }
 }
-

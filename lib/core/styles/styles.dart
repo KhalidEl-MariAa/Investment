@@ -28,4 +28,16 @@ abstract class Styles {
     fontWeight: FontWeight.w700,
     color: AppColors.whiteColor,
   );
+   static  TextStyle santosh12W700 = TextStyle(
+    fontSize: 12.sp,
+    fontFamily: fontFamily,
+    fontWeight: FontWeight.w700,
+    color: AppColors.whiteColor,
+  );
+  static  TextStyle santosh12W400 = TextStyle(
+    fontSize: 12.sp,
+    fontFamily: fontFamily,
+    fontWeight: FontWeight.w400,
+    color: AppColors.whiteColor,
+  );
 }
