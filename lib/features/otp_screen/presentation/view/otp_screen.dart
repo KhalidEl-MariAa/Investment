@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:investment/core/styles/styles.dart';
 import 'package:investment/core/utils/colors.dart';
+import 'package:investment/core/utils/screen_names.dart';
 import 'package:investment/features/register_screen/presentation/view/widgets/custom_elevatedbutton.dart';
 import 'package:pinput/pinput.dart';
 
@@ -59,7 +60,7 @@ class OtpScreen extends StatelessWidget {
                       child: CustomElevatedbutton(
                         onPressed: () {
                           
-                          // Navigator.pushNamed(context, ScreenNames.otp);
+                          Navigator.pushNamedAndRemoveUntil(context, ScreenNames.home, (route) => false);
                         },
                         backgroundColor: AppColors.primaryColor,
                         borderColor: AppColors.black,
