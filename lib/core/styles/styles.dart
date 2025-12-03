@@ -4,8 +4,8 @@ import 'package:investment/core/utils/colors.dart';
 import 'package:investment/core/utils/const.dart';
 
 abstract class Styles {
-  static  TextStyle santosh20W700 = TextStyle(
-    fontSize: 20.sp,
+  static  TextStyle santosh25W700 = TextStyle(
+    fontSize: 25.sp,
     fontFamily: fontFamily,
     fontWeight: FontWeight.w700,
     color: AppColors.whiteColor,
