@@ -34,7 +34,7 @@ class RegistrationScreen extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.h),
                   child: Text(
-                    'Begin with creating new free account. This helps you keep your investing way easier.',
+                    'Begin with creating new free account. This helps you keep your shopping way easier.',
                     textAlign: TextAlign.center,
                     style: Styles.santosh15W400.copyWith(
                       color: AppColors.black,
@@ -78,7 +78,42 @@ class RegistrationScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20.h),
+                  padding: EdgeInsets.symmetric(vertical: 10.h),
+                  child: CustomElevatedbutton(
+                    onPressed: () {
+                      
+                    },
+                    backgroundColor: Colors.white, borderColor: AppColors.black, child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                     Container(
+                      height: 25.sp,
+                      width: 25.sp,
+                      decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/images/google.png',), fit: BoxFit.contain)
+                     ),),
+                     Text('  Sign up with Google', style: Styles.santosh15W700.copyWith(color: AppColors.black),)
+                    ],
+                  )),
+                ),
+                 CustomElevatedbutton(
+                  onPressed: () {
+                    
+                  },
+                  backgroundColor: Colors.white, borderColor: AppColors.black, child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                   Container(
+                    height: 30.w,
+                    width: 30.w,
+                    decoration: BoxDecoration(
+                    image: DecorationImage(image: AssetImage('assets/images/Facebook1.png',), fit: BoxFit.contain)
+                   ),),
+                   Text('  Sign up with Facebook', style: Styles.santosh15W700.copyWith(color: AppColors.black),)
+                  ],
+                )),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10.h),
                   child: Text(
                     'or',
                     style: Styles.santosh15W400.copyWith(
@@ -88,13 +123,13 @@ class RegistrationScreen extends StatelessWidget {
                 ),
 
                 Padding(
-                  padding: EdgeInsets.only(bottom: 15.h),
+                  padding: EdgeInsets.only(bottom: 5.h),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'Already have an account?',
-                        style: Styles.santosh15W400.copyWith(
+                        style: Styles.santosh12W400.copyWith(
                           color: AppColors.black,
                         ),
                       ),
@@ -106,7 +141,7 @@ class RegistrationScreen extends StatelessWidget {
                         },
                         child: Text(
                           'Login',
-                          style: Styles.santosh15W700.copyWith(
+                          style: Styles.santosh12W700.copyWith(
                             color: AppColors.primaryColor,
                           ),
                         ),
@@ -115,15 +150,15 @@ class RegistrationScreen extends StatelessWidget {
                   ),
                 ),
                 // Spacer(),
-                SizedBox(height: 3.h),
+                SizedBox(height: 1.5.h),
                 // SizedBox(height: 20.h),
-                Text(
-                  'By continuing, you agree to our',
-                  style: Styles.santosh15W400.copyWith(
-                    color: AppColors.black,
-                    fontSize: 12.sp,
-                  ),
-                ),
+                // Text(
+                //   'By continuing, you agree to our',
+                //   style: Styles.santosh15W400.copyWith(
+                //     color: AppColors.black,
+                //     fontSize: 12.sp,
+                //   ),
+                // ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 3.h),
                   child: Text(

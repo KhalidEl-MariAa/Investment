@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:investment/core/styles/styles.dart';
 import 'package:investment/core/utils/colors.dart';
+import 'package:investment/features/introduction_screen/presentation/view/introduction_screen.dart';
 import 'package:investment/features/register_screen/presentation/view/registration_screen.dart';
 
 class WelcomScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _WelcomScreenState extends State<WelcomScreen> {
     Future.delayed(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => RegistrationScreen()),
+        MaterialPageRoute(builder: (context) => IntroductionScreen()),
       );
     });
   }
