@@ -51,7 +51,7 @@ class _WelcomScreenState extends State<WelcomScreen> {
                 padding: EdgeInsets.symmetric(vertical: 10.h),
                 child: Text('Shopping from home',
                 textAlign: TextAlign.center,
-                  style: Styles.santosh15W400
+                  style: Styles.santosh15W400.copyWith(fontSize: 12.sp)
                 ),
               )
                 ],

@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         routes: {
           ScreenNames.welcome: (context) => const WelcomScreen(),
           ScreenNames.register: (context) => const RegistrationScreen(),
-          ScreenNames.otp: (context) => const OtpScreen(),
+          // ScreenNames.otp: (context) => const OtpScreen(),
           ScreenNames.login: (context) => const LoginScreen(),
           ScreenNames.home: (context) => const MainScreen(), // Placeholder for home screen
           // Add other routes here

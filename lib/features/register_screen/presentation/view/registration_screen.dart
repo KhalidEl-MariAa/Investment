@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:investment/core/styles/styles.dart';
 import 'package:investment/core/utils/colors.dart';
 import 'package:investment/core/utils/screen_names.dart';
+import 'package:investment/features/otp_screen/presentation/view/otp_screen.dart';
 import 'package:investment/features/register_screen/presentation/view/widgets/custom_elevatedbutton.dart';
 import 'package:investment/features/register_screen/presentation/view/widgets/custom_textfield.dart';
 import 'package:investment/features/register_screen/presentation/view/widgets/password_textfield.dart';
@@ -66,7 +67,7 @@ class RegistrationScreen extends StatelessWidget {
                     child: CustomElevatedbutton(
                       onPressed: () {
                         
-                        Navigator.pushNamed(context, ScreenNames.otp);
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => OtpScreen(resetPass: false,)));
                       },
                       backgroundColor: AppColors.primaryColor,
                       borderColor: AppColors.black,
