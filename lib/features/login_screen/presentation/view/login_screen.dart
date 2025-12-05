@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:investment/core/styles/styles.dart';
 import 'package:investment/core/utils/colors.dart';
-import 'package:investment/core/utils/screen_names.dart';
+import 'package:investment/features/main_screen/presentation/view/main_screen.dart';
 import 'package:investment/features/otp_screen/presentation/view/otp_screen.dart';
 import 'package:investment/features/register_screen/presentation/view/widgets/custom_elevatedbutton.dart';
 import 'package:investment/features/register_screen/presentation/view/widgets/custom_textfield.dart';
@@ -73,7 +73,13 @@ class LoginScreen extends StatelessWidget {
                     width: double.infinity,
                     child: CustomElevatedbutton(
                       onPressed: () {
-                        Navigator.pushNamed(context, ScreenNames.otp);
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MainScreen(),
+                          ),
+                          (route) => false,
+                        );
                       },
                       backgroundColor: AppColors.primaryColor,
                       borderColor: AppColors.black,

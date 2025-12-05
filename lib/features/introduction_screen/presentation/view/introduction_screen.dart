@@ -17,6 +17,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColors.whiteColor,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [

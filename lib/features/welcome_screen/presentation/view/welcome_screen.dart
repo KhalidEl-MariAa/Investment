@@ -27,6 +27,7 @@ class _WelcomScreenState extends State<WelcomScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(

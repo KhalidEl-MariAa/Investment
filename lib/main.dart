@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_scalify/responsive_scale/responsive_config.dart';
+import 'package:flutter_scalify/responsive_scale/responsive_provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:investment/core/utils/screen_names.dart';
 import 'package:investment/features/login_screen/presentation/view/login_screen.dart';
@@ -20,6 +22,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       child: MaterialApp(
+        builder: (context, child) => ResponsiveProvider(
+          config: const ResponsiveConfig(
+            designWidth: 375,
+            designHeight: 812,
+            minScale: 0.5,
+            maxScale: 3.0,
+            // 🛡️ New: Protects UI on large screens (4K/UltraWide)
+            memoryProtectionThreshold: 1920.0, 
+            highResScaleFactor: 0.60, 
+          ),
+          child: child ?? const SizedBox()),
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
